@@ -31,8 +31,8 @@ public class ClienteController {
 	//create user
 	@PostMapping("/addcliente")
 	public Cliente createUser(@RequestBody Cliente cliente) {
-		Cliente cliente1 = clienteService.createUser(cliente);
-		return cliente1;
+		clienteService.createCliente(cliente);
+		return cliente;
 	}
 	
 	//Read(listar)
@@ -42,13 +42,13 @@ public class ClienteController {
 	}
 	
 	//update - PUT
-	@PutMapping("/update/{id}")
+	@PutMapping("/updatecliente/{id}")
 	public Cliente updateClienteById(@RequestBody Cliente cliente, @PathVariable("id") long id) {
 		return clienteService.updateCliente(cliente, id);
 	}
 	
 	//Delete cliente by id
-	@DeleteMapping("/delete/{id}")
+	@DeleteMapping("/deletecliente/{id}")
 	public String deleteCliente(@PathVariable("id") long id) {
 	 clienteService.deleteCliente(id);
 	  return "Apagado com sucesso!";

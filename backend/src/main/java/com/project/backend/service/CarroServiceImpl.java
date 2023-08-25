@@ -35,8 +35,8 @@ public class CarroServiceImpl implements CarroService {
 	}
 
 	@Override
-	public Carro updateCarro(Carro user, long id) {
-		Carro carro = carroRepository.findById(id).get();
+	public Carro updateCarro(Carro carro, long id) {
+		carroRepository.findById(id).get();
 		carro.setPlaca(carro.getPlaca());
 		carro.setRenavam(carro.getRenavam());
 		carro.setMarca(carro.getMarca());

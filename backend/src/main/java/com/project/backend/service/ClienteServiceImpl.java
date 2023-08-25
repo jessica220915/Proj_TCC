@@ -36,7 +36,7 @@ public class ClienteServiceImpl implements ClienteService {
 
 	@Override
 	public Cliente updateCliente(Cliente cliente, long id) {
-		Cliente cliente = clienteRepository.findById(id).get();
+		clienteRepository.findById(id).get();
 		cliente.setNome(cliente.getNome());
 		cliente.setCpf(cliente.getCpf());
 		cliente.setLogadouro(cliente.getLogadouro());

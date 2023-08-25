@@ -31,19 +31,19 @@ public class CarroController {
 	//create user
 	@PostMapping("/addcarro")
 	public Carro createCarro(@RequestBody Carro carro) {
-		Carro carro = carroService.createCarro(carro);
+		carroService.createCarro(carro);
 		return carro;
 	}
 	
 	//Read(listar)
-	@GetMapping("/carros")
+	@GetMapping("/carros")	
 	public List<Carro> getCarro(){
 		return carroService.getCarro();
 	}
 	
 	//update - PUT
 	@PutMapping("/update/{id}")
-	public Carro updateCarroById(@RequestBody Carro carro, @PathVariable("id") long id) {
+	public Carro updateById(@RequestBody Carro carro, @PathVariable("id") long id) {
 		return carroService.updateCarro(carro, id);
 	}
 	

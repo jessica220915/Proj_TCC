@@ -1,0 +1,15 @@
+package com.project.backend.repository;
+
+import org.springframework.stereotype.Repository;
+
+import com.project.backend.model.Cliente;
+
+@Repository
+public interface ClienteRepository {
+
+	Cliente save(Cliente user);
+
+	void deleteById(long id);
+
+	
+}

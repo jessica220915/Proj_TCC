@@ -10,7 +10,7 @@ import com.project.backend.model.Cliente;
 public interface ClienteService {
 
 	//create cliente
-	public Cliente createUser(Cliente cliente);
+	public Cliente createCliente(Cliente cliente);
 	
 	//read cliente - Listar
 	public List<Cliente> getCliente();
